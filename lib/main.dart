@@ -3,9 +3,7 @@ import 'blue.dart';
 
 
 
-Future<void> main() async {
-   WidgetsFlutterBinding.ensureInitialized();
-
+void main() {
    runApp(const MaterialApp(
       home: Home(),
    ));
