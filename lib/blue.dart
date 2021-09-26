@@ -54,10 +54,9 @@ class Home extends StatelessWidget {
               iconSize: 300,
               color: Colors.blueAccent,
               tooltip: 'Check bluetooth connection',
-              //label: Text('blue')
             ),
             const Text(
-                'Press the bluetooth icon',//num(),await blue()
+                'Press the bluetooth icon',
                 style: TextStyle(
                   color: Colors.grey,)
             ),
@@ -70,12 +69,8 @@ class Home extends StatelessWidget {
 
 Future<String> blue() async {
   try {
-    Future<bool> _checkDeviceBluetoothIsOn() async {
-      return await flutterBlue.isOn;
-    }
-    Future<bool> a = _checkDeviceBluetoothIsOn();
-
-    if (await a == true) {
+    Future<bool> isOn = flutterBlue.isOn;
+    if (await isOn == true) {
       return await Future(() => "Bluetooth is on");
     }
     else {
@@ -86,6 +81,3 @@ Future<String> blue() async {
     return await Future(() => 'Bluetooth is not available on the device');
   }
 }
-
-
-
